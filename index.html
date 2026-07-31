@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet">
+  
+  <!-- SEO Primary Meta Tags (Farsi Default) -->
+  <title>نئورا | استودیو تخصصی طراحی گرافیک، UI/UX و توسعه وب</title>
+  <meta name="title" content="نئورا | استودیو تخصصی طراحی گرافیک، UI/UX و توسعه وب" />
+  <meta name="description" content="استودیو نئورا - ارائه خدمات لوکس و حرفه‌ای طراحی گرافیک، هویت بصری برند، طراحی UI/UX، توسعه وب‌سایت‌های سفارشی و سئوی تخصصی برای کسب‌وکارهای پیشرو." />
+  <meta name="keywords" content="طراحی گرافیک, هویت بصری, طراحی لوگو, طراحی UI UX, توسعه وب, سئو سایت, استودیو نئورا, برندینگ لوکس, طراحی پوستر" />
+  <meta name="author" content="NEORA Studio" />
+  <link rel="canonical" href="https://neora.design/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neora.design/" />
+  <meta property="og:title" content="نئورا | استودیو طراحی گرافیک، UI/UX و وب" />
+  <meta property="og:description" content="خلق تجربیات دیجیتال ماندگار، هویت بصری لوکس و وب‌سایت‌های فوق‌العاده سریع برای برندهای برتر." />
+  <meta property="og:image" content="https://neora.design/og-cover.jpg" />
+  <meta property="og:locale" content="fa_IR" />
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="نئورا | طراحی گرافیک و توسعه وب" />
+  <meta property="twitter:description" content="استودیو تخصصی طراحی گرافیک، هویت بصری، UI/UX و توسعه فرانت‌اند." />
+
+  <!-- Google Fonts: Inter & Vazirmatn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org JSON-LD (Updated for Graphic Design & Web) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "NEORA Studio",
+    "image": "https://neora.design/logo.png",
+    "description": "Bespoke Graphic Design, Brand Identity, UI/UX Design, and Frontend Web Engineering Studio.",
+    "priceRange": "$$$$",
+    "knowsAbout": [
+      "Graphic Design",
+      "Brand Identity",
+      "Logo Design",
+      "UI/UX Design",
+      "Web Development",
+      "SEO Optimization"
+    ],
+    "url": "https://neora.design/",
+    "sameAs": [
+      "https://github.com",
+      "https://linkedin.com",
+      "https://instagram.com"
+    ]
+  }
+  </script>
+
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-brand">NEORA<span>.</span></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">NEORA<span class="logo-dot"></span></a>
+
+      <ul class="nav-menu">
+        <li><a href="#projects" class="nav-link" data-i18n="nav_projects">پروژه‌ها</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav_services">خدمات</a></li>
+        <li><a href="#blog" class="nav-link" data-i18n="blog_tag">وبلاگ</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav_contact">تماس</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="lang-switch" id="lang-btn" onclick="toggleLanguage()">EN</button>
+        <a href="#contact" class="btn btn-primary nav-cta-desktop" style="padding: 10px 20px; font-size: 0.85rem;" data-i18n="btn_start">شروع پروژه</a>
+        
+        <button class="hamburger-btn" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOVED HERE: MOBILE GLASS MENU DRAWER (OUTSIDE HEADER) -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+  <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+    <div class="mobile-menu-header">
+      <div class="logo">NEORA<span class="logo-dot"></span></div>
+      <button class="mobile-close-btn" onclick="toggleMobileMenu()">✕</button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li><a href="#projects" onclick="closeMobileMenu()" data-i18n="nav_projects">پروژه‌ها</a></li>
+      <li><a href="#services" onclick="closeMobileMenu()" data-i18n="nav_services">خدمات</a></li>
+      <li><a href="#blog" onclick="closeMobileMenu()" data-i18n="blog_tag">وبلاگ</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()" data-i18n="nav_contact">تماس</a></li>
+    </ul>
+
+    <div class="mobile-menu-footer">
+      <a href="#contact" onclick="closeMobileMenu()" class="btn btn-primary" style="width: 100%;" data-i18n="btn_start">شروع پروژه</a>
+      <div class="mobile-socials">
+        <a href="https://github.com" target="_blank">GitHub</a> •
+        <a href="https://instagram.com" target="_blank">Instagram</a> •
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Rest of your content -->
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="section-tag" data-i18n="hero_tag">Digital Experience Studio</div>
+          <h1 class="hero-title" data-i18n="hero_title">
+            Designing digital experiences <span>that people remember.</span>
+          </h1>
+          <p class="hero-desc" data-i18n="hero_desc">
+            We combine high-end UI/UX aesthetics with precision front-end engineering to build high-converting websites for ambitious brands.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" data-i18n="btn_view_work">View Portfolio</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="btn_contact">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <canvas id="hero-canvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Logo Marquee -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-item">LUXURY REAL ESTATE</div>
+        <div class="marquee-item">•</div>
+        <div class="marquee-item">AI PLATFORMS</div>
+        <div class="marquee-item">•</div>
+        <div class="marquee-item">FINTECH GLOBAL</div>
+        <div class="marquee-item">•</div>
+        <div class="marquee-item">GOURMET HOSPITALITY</div>
+        <div class="marquee-item">•</div>
+        <div class="marquee-item">FINE TIMEPIECES</div>
+        <div class="marquee-item">•</div>
+        <div class="marquee-item">STARTUP VENTURES</div>
+        <div class="marquee-item">•</div>
+        <!-- Duplicate for loop -->
+        <div class="marquee-item">LUXURY REAL ESTATE</div>
+        <div class="marquee-item">•</div>
+        <div class="marquee-item">AI PLATFORMS</div>
+        <div class="marquee-item">•</div>
+        <div class="marquee-item">FINTECH GLOBAL</div>
+        <div class="marquee-item">•</div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <div class="section-tag" data-i18n="services_tag">Capabilities</div>
+        <h2 class="section-title" data-i18n="services_title">Bespoke Digital Services</h2>
+        <p class="section-desc" data-i18n="services_desc">Tailored solution packages focused on extreme visual luxury and technical performance.</p>
+
+        <div class="services-grid">
+          <div class="glass-card service-card">
+            <div class="service-icon">✦</div>
+            <h3 class="service-title" data-i18n="s1_title">UI/UX Design</h3>
+            <p class="service-desc" data-i18n="s1_desc">Intuitive interfaces, user research, wireframing, and Figma design systems crafted for high conversion.</p>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">⚡</div>
+            <h3 class="service-title" data-i18n="s2_title">Website Design</h3>
+            <p class="service-desc" data-i18n="s2_desc">Bespoke marketing websites that communicate authority, luxury, and clarity for modern brands.</p>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">🚀</div>
+            <h3 class="service-title" data-i18n="s3_title">Front-End Development</h3>
+            <p class="service-desc" data-i18n="s3_desc">Lightning-fast semantic code built with Vanilla JavaScript, smooth animations, and zero framework bloat.</p>
+          </div>
+
+          <div class="glass-card service-card">
+            <div class="service-icon">🔍</div>
+            <h3 class="service-title" data-i18n="s4_title">SEO Optimization</h3>
+            <p class="service-desc" data-i18n="s4_desc">Rank #1 on Google with high-performance metadata, Schema.org integration, and Lighthouse 100 metrics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Showcase -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-tag" data-i18n="projects_tag">Selected Works</div>
+        <h2 class="section-title" data-i18n="projects_title">Featured Projects</h2>
+        <p class="section-desc" data-i18n="projects_desc">A glimpse into 5 of our flagship digital design and engineering case studies.</p>
+
+        <div class="projects-stack">
+          <!-- Project 1 -->
+          <div class="glass-card project-card">
+            <div class="project-media">
+              <div class="project-img-placeholder">APEX ESTATE</div>
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span class="tech-pill">UI/UX Design</span>
+                <span class="tech-pill">Figma</span>
+                <span class="tech-pill">Web Dev</span>
+              </div>
+              <h3 class="project-title">Apex Luxury Real Estate</h3>
+              <p class="project-desc" data-i18n="p1_desc">A high-end real estate portal designed for high-net-worth property transactions with interactive 3D floor plans.</p>
+              <div class="project-actions">
+                <a href="./projects/project-1.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;" data-i18n="btn_case_study">Case Study ➔</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="glass-card project-card">
+            <div class="project-media">
+              <div class="project-img-placeholder">LUMINARY AI</div>
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span class="tech-pill">SaaS Platform</span>
+                <span class="tech-pill">Brand Identity</span>
+                <span class="tech-pill">SEO 100</span>
+              </div>
+              <h3 class="project-title">Luminary AI Analytics</h3>
+              <p class="project-desc" data-i18n="p2_desc">Next-generation AI data platform landing page featuring glassmorphism elements and glowing data charts.</p>
+              <div class="project-actions">
+                <a href="./projects/project-2.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;" data-i18n="btn_case_study">Case Study ➔</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="glass-card project-card">
+            <div class="project-media">
+              <div class="project-img-placeholder">VELOCE GOURMET</div>
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span class="tech-pill">Hospitality</span>
+                <span class="tech-pill">Booking UX</span>
+                <span class="tech-pill">Animation</span>
+              </div>
+              <h3 class="project-title">Veloce Dining Experience</h3>
+              <p class="project-desc" data-i18n="p3_desc">Digital experience and interactive table reservation system for a Michelin-starred fine dining restaurant.</p>
+              <div class="project-actions">
+                <a href="./projects/project-3.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;" data-i18n="btn_case_study">Case Study ➔</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="glass-card project-card">
+            <div class="project-media">
+              <div class="project-img-placeholder">CHRONOS WATCHES</div>
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span class="tech-pill">E-Commerce</span>
+                <span class="tech-pill">Minimal UI</span>
+                <span class="tech-pill">WebGL</span>
+              </div>
+              <h3 class="project-title">Chronos Fine Timepieces</h3>
+              <p class="project-desc" data-i18n="p4_desc">Minimal luxury watch showcase platform built with precision typography and micro-interactions.</p>
+              <div class="project-actions">
+                <a href="./projects/project-4.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;" data-i18n="btn_case_study">Case Study ➔</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="glass-card project-card">
+            <div class="project-media">
+              <div class="project-img-placeholder">AURA MIND</div>
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span class="tech-pill">Health App</span>
+                <span class="tech-pill">Design System</span>
+                <span class="tech-pill">Frontend</span>
+              </div>
+              <h3 class="project-title">Aura Health & Mindfulness</h3>
+              <p class="project-desc" data-i18n="p5_desc">Clean web interface for a mental wellness app focusing on soft gradients and peaceful user workflows.</p>
+              <div class="project-actions">
+                <a href="./projects/project-5.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.875rem;" data-i18n="btn_case_study">Case Study ➔</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Graphic Design Showcase Section -->
+    <section id="graphic-design" style="background: rgba(217, 241, 255, 0.25);">
+      <div class="container">
+        <div class="section-tag" data-i18n="graphic_tag">طراحی گرافیک & هویت بصری</div>
+        <h2 class="section-title" data-i18n="graphic_title">هنر بصری و هویت برند</h2>
+        <p class="section-desc" data-i18n="graphic_desc">خلق سیستم‌های برندینگ مدرن، لوگودیزاین‌های ماندگار، تایپوگرافی لوکس و آرت‌ورک‌های تبلیغاتی.</p>
+
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+          <!-- Graphic Card 1 -->
+          <div class="glass-card service-card">
+            <div class="project-media" style="height: 240px; margin-bottom: 20px; background: linear-gradient(135deg, #0284C7, var(--primary)); color: #FFF; font-size: 1.5rem;">
+              BRAND IDENTITY
+            </div>
+            <div class="tech-tags" style="margin-bottom: 12px;">
+              <span class="tech-pill">Brand Identity</span>
+              <span class="tech-pill">Logo Design</span>
+            </div>
+            <h3 class="service-title" data-i18n="g1_title">هویت بصری و برندینگ Apex</h3>
+            <p class="service-desc" data-i18n="g1_desc">طراحی دفترچه راهنمای برند، لوگوتایپ اختصاصی، رنگ‌شناسی و پست‌های شبکه‌های اجتماعی.</p>
+          </div>
+
+          <!-- Graphic Card 2 -->
+          <div class="glass-card service-card">
+            <div class="project-media" style="height: 240px; margin-bottom: 20px; background: linear-gradient(135deg, var(--accent), var(--secondary)); color: #0F172A; font-size: 1.5rem;">
+              EDITORIAL & POSTER
+            </div>
+            <div class="tech-tags" style="margin-bottom: 12px;">
+              <span class="tech-pill">Poster Art</span>
+              <span class="tech-pill">Typography</span>
+            </div>
+            <h3 class="service-title" data-i18n="g2_title">مجموعه پوسترهای تایپوگرافی نئورا</h3>
+            <p class="service-desc" data-i18n="g2_desc">طراحی پوستر مفهومی نمایشگاهی با ترکیب تایپوگرافی مدرن فارسی و انگلیسی.</p>
+          </div>
+
+          <!-- Graphic Card 3 -->
+          <div class="glass-card service-card">
+            <div class="project-media" style="height: 240px; margin-bottom: 20px; background: linear-gradient(135deg, #38BDF8, #D9F1FF); color: #0284C7; font-size: 1.5rem;">
+              PACKAGING DESIGN
+            </div>
+            <div class="tech-tags" style="margin-bottom: 12px;">
+              <span class="tech-pill">Packaging</span>
+              <span class="tech-pill">3D Render</span>
+            </div>
+            <h3 class="service-title" data-i18n="g3_title">طراحی بسته بندی محصولات Chronos</h3>
+            <p class="service-desc" data-i18n="g3_desc">بسته‌بندی مینیمال و مینیمالیستی برای ساعت‌های گران‌قیمت با چاپ طلاکوب روی جعبه.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+      <div class="container">
+        <div class="section-tag" data-i18n="process_tag">Workflow</div>
+        <h2 class="section-title" data-i18n="process_title">The Execution Process</h2>
+        <p class="section-desc" data-i18n="process_desc">How we transform initial concepts into market-defining digital products.</p>
+
+        <div class="process-grid">
+          <div class="glass-card process-card">
+            <div class="process-num">01</div>
+            <h3 data-i18n="pr1_title">Discovery & Strategy</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="pr1_desc">Uncovering target audiences, business goals, and defining clear milestones.</p>
+          </div>
+
+          <div class="glass-card process-card">
+            <div class="process-num">02</div>
+            <h3 data-i18n="pr2_title">Wireframing & UX</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="pr2_desc">Architecting visual flow and interactive user journeys in Figma.</p>
+          </div>
+
+          <div class="glass-card process-card">
+            <div class="process-num">03</div>
+            <h3 data-i18n="pr3_title">UI & Visual Craft</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="pr3_desc">Designing luxury pixel-perfect layouts, typography scales, and visual systems.</p>
+          </div>
+
+          <div class="glass-card process-card">
+            <div class="process-num">04</div>
+            <h3 data-i18n="pr4_title">Development & Launch</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="pr4_desc">Writing high-speed semantic code, optimizing SEO, and deploying flawless releases.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+   
+    <!-- ==========================================================================
+     1. PRICING SECTION
+     ========================================================================== -->
+
+  <div class="container">
+    <div class="section-tag" data-i18n="pricing_tag">سرمایه‌گذاری</div>
+    <h2 class="section-title" data-i18n="pricing_title">قیمت‌گذاری شفاف</h2>
+    <p class="section-desc" data-i18n="pricing_desc">پکیج متناسب با اهداف و نیازهای کسب‌وکار خود را انتخاب کنید.</p>
+
+ 
+
+  <div class="pricing-grid">
+  
+  <!-- Package 1: Brand Essentials -->
+  <div class="glass-card pricing-card">
+    <div class="pricing-header">
+      <h3 class="pricing-title" data-i18n="p1_pkg_title">پکیج هویت بصری (Brand Essentials)</h3>
+      <p class="pricing-desc" data-i18n="p1_pkg_desc">ایده‌آل برای کسب‌وکارهایی که به هویت بصری قوی نیاز دارند.</p>
+    </div>
+
+    <div class="price-box">
+      <div class="price-amount" data-i18n="p1_pkg_price">شروع از ۸,۰۰۰,۰۰۰ تومان</div>
+    </div>
+
+    <ul class="pricing-features">
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f1">طراحی لوگو</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f2">پالت رنگی برند</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f3">سیستم تایپوگرافی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f4">کارت ویزیت</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f5">قالب‌های شبکه‌های اجتماعی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f6">راهنمای کوتاه برند (Mini Brandbook)</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f7">طراحی بسته‌بندی (اختیاری)</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f8">فایل‌های آماده چاپ</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f9">فایل‌های سورس و لایه باز</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p1_f10">مجوز استفاده تجاری</span></li>
+    </ul>
+
+    <div class="pricing-delivery">
+      ⏱️ <span data-i18n="p1_pkg_deliv">زمان تحویل: ۷ تا ۱۲ روز</span>
+    </div>
+
+    <div class="pricing-action">
+      <a href="#contact" class="btn btn-secondary" data-i18n="p1_pkg_btn">شروع این پکیج</a>
+    </div>
+  </div>
+
+  <!-- Package 2: Product Design -->
+  <div class="glass-card pricing-card">
+    <div class="pricing-header">
+      <h3 class="pricing-title" data-i18n="p2_pkg_title">طراحی محصول (Product Design)</h3>
+      <p class="pricing-desc" data-i18n="p2_pkg_desc">عالی برای استارتاپ‌ها قبل از شروع کدنویسی و توسعه.</p>
+    </div>
+
+    <div class="price-box">
+      <div class="price-amount" data-i18n="p2_pkg_price">شروع از ۱۵,۰۰۰,۰۰۰ تومان</div>
+    </div>
+
+    <ul class="pricing-features">
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f1">تحقیقات تجربه کاربری (UX Research)</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f2">تحلیل رقبا</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f3">معماری اطلاعات</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f4">جریان کاربری (User Flow)</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f5">وایرفریم‌ها</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f6">طراحی UI با کیفیت بالا</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f7">طراحی واکنش‌گرا دسکتاپ و موبایل</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f8">پروتوتایپ تعاملی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f9">سیستم دیزاین (Design System)</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f10">فایل تحویل به برنامه‌نویس</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p2_f11">فایل سورس فیگما</span></li>
+    </ul>
+
+    <div class="pricing-delivery">
+      ⏱️ <span data-i18n="p2_pkg_deliv">زمان تحویل: ۲ تا ۴ هفته</span>
+    </div>
+
+    <div class="pricing-action">
+      <a href="#contact" class="btn btn-secondary" data-i18n="p2_pkg_btn">شروع این پکیج</a>
+    </div>
+  </div>
+
+  <!-- Package 3: Engineering -->
+  <div class="glass-card pricing-card">
+    <div class="pricing-header">
+      <h3 class="pricing-title" data-i18n="p3_pkg_title">توسعه و کدنویسی (Engineering)</h3>
+      <p class="pricing-desc" data-i18n="p3_pkg_desc">ایده‌آل برای کسب‌وکارهایی که طرح آماده دارند.</p>
+    </div>
+
+    <div class="price-box">
+      <div class="price-amount" data-i18n="p3_pkg_price">شروع از ۲۰,۰۰۰,۰۰۰ تومان</div>
+    </div>
+
+    <ul class="pricing-features">
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f1">توسعه واکنش‌گرا (Responsive)</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f2">کدنویسی استاندارد HTML</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f3">استایل‌دهی مدرن CSS</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f4">تعاملات Vanilla JavaScript</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f5">بهینه‌سازی سرعت و عملکرد</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f6">بهینه‌سازی کامل نسخه موبایل</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f7">ساختار آماده برای سئو</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f8">نشانه‌گذاری Schema Markup</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f9">فرم‌های تماس تعاملی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f10">بهینه‌سازی نمره Lighthouse</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p3_f11">پشتیبانی در راه‌اندازی و دیپلوی</span></li>
+    </ul>
+
+    <div class="pricing-delivery">
+      ⏱️ <span data-i18n="p3_pkg_deliv">زمان تحویل: ۳ تا ۵ هفته</span>
+    </div>
+
+    <div class="pricing-action">
+      <a href="#contact" class="btn btn-secondary" data-i18n="p3_pkg_btn">شروع این پکیج</a>
+    </div>
+  </div>
+
+  <!-- Package 4: Digital Experience (Featured) -->
+  <div class="glass-card pricing-card highlighted">
+    <span class="pricing-badge" data-i18n="p4_pkg_badge">محبوب‌ترین</span>
+    
+    <div class="pricing-header">
+      <h3 class="pricing-title" data-i18n="p4_pkg_title">تجربه دیجیتال کامل (Digital Experience)</h3>
+      <p class="pricing-desc" data-i18n="p4_pkg_desc">راهکار جامع صفر تا صد برای حضور قدرتمند دیجیتال.</p>
+    </div>
+
+    <div class="price-box">
+      <div class="price-amount" data-i18n="p4_pkg_price">شروع از ۳۲,۰۰۰,۰۰۰ تومان</div>
+    </div>
+
+    <ul class="pricing-features">
+      <li class="highlighted-feature"><span class="feature-check">✓</span> <span data-i18n="p4_f1">شامل تمام امکانات طراحی محصول</span></li>
+      <li class="highlighted-feature"><span class="feature-check">✓</span> <span data-i18n="p4_f2">شامل تمام امکانات کدنویسی و توسعه</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p4_f3">مشاوره استراتژیک برند</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p4_f4">استراتژی لندینگ پیج</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p4_f5">سئوی فنی و تخصصی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p4_f6">نصب و پیکربندی ابزارهای تحلیلی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p4_f7">یک ماه پشتیبانی اختصاصی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p4_f8">کمک در رونمایی و انتشار</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p4_f9">گزارش عملکرد و سرعت</span></li>
+    </ul>
+
+    <div class="pricing-delivery">
+      ⏱️ <span data-i18n="p4_pkg_deliv">زمان تحویل: ۴ تا ۶ هفته</span>
+    </div>
+
+    <div class="pricing-action">
+      <a href="#contact" class="btn btn-primary" data-i18n="p4_pkg_btn">رزرو جلسه مشاوره</a>
+    </div>
+  </div>
+
+  <!-- Package 5: Full Brand Launch -->
+  <div class="glass-card pricing-card">
+    <div class="pricing-header">
+      <h3 class="pricing-title" data-i18n="p5_pkg_title">رونمایی کامل برند (Full Brand Launch)</h3>
+      <p class="pricing-desc" data-i18n="p5_pkg_desc">برای کسب‌وکارهایی که قصد راه‌اندازی یک برند کاملاً جدید را دارند.</p>
+    </div>
+
+    <div class="price-box">
+      <div class="price-amount" data-i18n="p5_pkg_price">شروع از ۴۵,۰۰۰,۰۰۰ تومان</div>
+    </div>
+
+    <ul class="pricing-features">
+      <li class="highlighted-feature"><span class="feature-check">✓</span> <span data-i18n="p5_f1">تمام امکانات پکیج هویت بصری</span></li>
+      <li class="highlighted-feature"><span class="feature-check">✓</span> <span data-i18n="p5_f2">تمام امکانات پکیج طراحی محصول</span></li>
+      <li class="highlighted-feature"><span class="feature-check">✓</span> <span data-i18n="p5_f3">تمام امکانات پکیج توسعه و کدنویسی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p5_f4">استراتژی جامع برند</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p5_f5">سیستم جامع لوگو</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p5_f6">وب‌سایت اختصاصی کامل</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p5_f7">دارایی‌های گرافیکی شبکه‌های اجتماعی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p5_f8">پایه‌ریزی سئوی اولیه</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p5_f9">پشتیبانی رونمایی</span></li>
+      <li><span class="feature-check">✓</span> <span data-i18n="p5_f10">اولویت در بازبینی‌ها</span></li>
+    </ul>
+
+    <div class="pricing-delivery">
+      ⏱️ <span data-i18n="p5_pkg_deliv">زمان تحویل: برنامه زمان‌بندی اختصاصی</span>
+    </div>
+
+    <div class="pricing-action">
+      <a href="#contact" class="btn btn-secondary" data-i18n="p5_pkg_btn">بیایید برند شما را بسازیم</a>
+    </div>
+  </div>
+
+</div>
+</div>
+  
+
+    
+
+<!-- ==========================================================================
+     2. ADD-ON SERVICES SECTION
+     ========================================================================== -->
+<section id="addons" style="background: rgba(93, 183, 255, 0.04);">
+  <div class="container">
+    <div class="section-tag" data-i18n="addons_tag">امکانات تکمیلی</div>
+    <h2 class="section-title" data-i18n="addons_title">خدمات جانبی (Add-ons)</h2>
+    <p class="section-desc" data-i18n="addons_desc">افزونه‌های انعطاف‌پذیر برای ارتقای دامنه پروژه شما.</p>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 40px;">
+      
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">📄</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon1_title">صفحه اضافی</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon1_price">+۲,۰۰۰,۰۰۰ تومان / هر صفحه</p>
+      </div>
+
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">🚀</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon2_title">لندینگ پیج اختصاصی</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon2_price">۶,۰۰۰,۰۰۰ تومان</p>
+      </div>
+
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">📊</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon3_title">طراحی داشبورد</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon3_price">شروع از ۱۰,۰۰۰,۰۰۰ تومان</p>
+      </div>
+
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">📘</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon4_title">راهنمای برند (Brandbook)</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon4_price">۵,۰۰۰,۰۰۰ تومان</p>
+      </div>
+
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">📦</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon5_title">طراحی بسته‌بندی</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon5_price">شروع از ۵,۰۰۰,۰۰۰ تومان</p>
+      </div>
+
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">🎬</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon6_title">موشن گرافیک</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon6_price">شروع از ۴,۰۰۰,۰۰۰ تومان</p>
+      </div>
+
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">🔍</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon7_title">بهینه‌سازی سئو</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon7_price">شروع از ۸,۰۰۰,۰۰۰ تومان</p>
+      </div>
+
+      <div class="glass-card service-card" style="padding: 28px;">
+        <div class="service-icon" style="width: 44px; height: 44px; font-size: 1.2rem; margin-bottom: 16px;">🛠️</div>
+        <h3 class="service-title" style="font-size: 1.15rem;" data-i18n="addon8_title">پشتیبانی و نگهداری وب‌سایت</h3>
+        <p class="service-desc" style="font-weight: 700; color: var(--primary-dark); margin-top: 8px;" data-i18n="addon8_price">شروع از ۳,۰۰۰,۰۰۰ تومان / ماهانه</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     3. WHY CHOOSE NEORA SECTION
+     ========================================================================== -->
+<section id="why-neora">
+  <div class="container">
+    <div class="section-tag" data-i18n="why_tag">چرا نئورا</div>
+    <h2 class="section-title" data-i18n="why_title">چرا مشتریان نئورا را انتخاب می‌کنند؟</h2>
+    <p class="section-desc" data-i18n="why_desc">مبتنی بر دقت، زیبایی‌شناسی لوکس و مهندسی استراتژیک کسب‌وکار.</p>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 50px;">
+      
+      <div class="glass-card service-card">
+        <div class="service-icon">💎</div>
+        <h3 class="service-title" style="font-size: 1.25rem;" data-i18n="why1_title">طراحی بصری لوکس</h3>
+        <p class="service-desc" data-i18n="why1_desc">هر پروژه به صورت کاملاً اختصاصی و منحصر‌به‌فرد طراحی می‌شود.</p>
+      </div>
+
+      <div class="glass-card service-card">
+        <div class="service-icon">🎯</div>
+        <h3 class="service-title" style="font-size: 1.25rem;" data-i18n="why2_title">تجربه کاربری با تمرکز بر فروش</h3>
+        <p class="service-desc" data-i18n="why2_desc">تصمیمات طراحی استراتژیک برای ارتقای نرخ تبدیل و رشد کسب‌وکار.</p>
+      </div>
+
+      <div class="glass-card service-card">
+        <div class="service-icon">⚡</div>
+        <h3 class="service-title" style="font-size: 1.25rem;" data-i18n="why3_title">کدنویسی فرانت‌اند تمیز</h3>
+        <p class="service-desc" data-i18n="why3_desc">ساختار سریع، مقیاس‌پذیر و قابل نگهداری بدون کدهای اضافی.</p>
+      </div>
+
+      <div class="glass-card service-card">
+        <div class="service-icon">🔍</div>
+        <h3 class="service-title" style="font-size: 1.25rem;" data-i18n="why4_title">آماده برای سئو</h3>
+        <p class="service-desc" data-i18n="why4_desc">کدنویسی استاندارد، دسترسی‌پذیری، نشانه‌گذاری Schema و نمره ۱۰۰ لایت‌هاوس.</p>
+      </div>
+
+      <div class="glass-card service-card">
+        <div class="service-icon">🤝</div>
+        <h3 class="service-title" style="font-size: 1.25rem;" data-i18n="why5_title">همکاری بلندمدت</h3>
+        <p class="service-desc" data-i18n="why5_desc">پشتیبانی کامل پس از رونمایی و بهبودهای مستمر برای رشد پایدار.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     4. FAQ SECTION
+     ========================================================================== -->
+<section id="faq" style="background: rgba(93, 183, 255, 0.04);">
+  <div class="container">
+    <div class="section-tag" data-i18n="faq_tag">سوالات متداول</div>
+    <h2 class="section-title" data-i18n="faq_title">سوالات متداول</h2>
+    <p class="section-desc" data-i18n="faq_desc">پاسخ به سوالات کلیدی شما درباره شروع پروژه با نئورا.</p>
+
+    <div style="max-width: 800px; margin: 40px auto 0 auto; display: flex; flex-direction: column; gap: 16px;">
+      
+      <details class="glass-card" style="padding: 24px; border-radius: var(--radius-md); cursor: pointer;">
+        <summary style="font-weight: 700; font-size: 1rem; color: var(--text-main); outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          <span data-i18n="faq1_q">آیا امکان سفارش فقط طراحی UI وجود دارد؟</span>
+          <span style="color: var(--primary-dark); font-size: 1.3rem;">+</span>
+        </summary>
+        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;" data-i18n="faq1_a">
+          بله، کاملاً. ما پکیج‌های مستقل طراحی UI/UX را همراه با پروتوتایپ تعاملی فیگما، سیستم دیزاین و فایل‌های آماده برای تحویل به برنامه‌نویس ارائه می‌دهیم.
+        </p>
+      </details>
+
+      <details class="glass-card" style="padding: 24px; border-radius: var(--radius-md); cursor: pointer;">
+        <summary style="font-weight: 700; font-size: 1rem; color: var(--text-main); outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          <span data-i18n="faq2_q">آیا می‌توانید وب‌سایت فعلی من را بازطراحی کنید؟</span>
+          <span style="color: var(--primary-dark); font-size: 1.3rem;">+</span>
+        </summary>
+        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;" data-i18n="faq2_a">
+          بله. ما ابتدا عملکرد، تجربه کاربری و نقاط ضعف وب‌سایت فعلی شما را بررسی کرده و سپس پلتفرمی مدرن و پرفروش بازطراحی می‌کنیم.
+        </p>
+      </details>
+
+      <details class="glass-card" style="padding: 24px; border-radius: var(--radius-md); cursor: pointer;">
+        <summary style="font-weight: 700; font-size: 1rem; color: var(--text-main); outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          <span data-i18n="faq3_q">آیا با مشتریان بین‌المللی هم همکاری می‌کنید؟</span>
+          <span style="color: var(--primary-dark); font-size: 1.3rem;">+</span>
+        </summary>
+        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;" data-i18n="faq3_a">
+          بله، استودیو نئورا با مشتریانی در سراسر جهان همکاری داشته و تمام ارتباطات و تحویل مراحل پروژه را آنلاین مدیریت می‌کند.
+        </p>
+      </details>
+
+      <details class="glass-card" style="padding: 24px; border-radius: var(--radius-md); cursor: pointer;">
+        <summary style="font-weight: 700; font-size: 1rem; color: var(--text-main); outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          <span data-i18n="faq4_q">چند مرحله بازبینی و ویرایش در پکیج‌ها گنجانده شده است؟</span>
+          <span style="color: var(--primary-dark); font-size: 1.3rem;">+</span>
+        </summary>
+        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;" data-i18n="faq4_a">
+          هر پکیج شامل دوره‌های بازبینی مشخص در مراحل وایرفریم و طراحی نهایی است تا اطمینان حاصل شود محصول نهایی دقیقاً مطابق با اهداف شماست.
+        </p>
+      </details>
+
+      <details class="glass-card" style="padding: 24px; border-radius: var(--radius-md); cursor: pointer;">
+        <summary style="font-weight: 700; font-size: 1rem; color: var(--text-main); outline: none; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+          <span data-i18n="faq5_q">شرایط پرداخت و تسویه‌حساب به چه صورت است؟</span>
+          <span style="color: var(--primary-dark); font-size: 1.3rem;">+</span>
+        </summary>
+        <p style="margin-top: 14px; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;" data-i18n="faq5_a">
+          پروژه‌ها معمولاً با ۵۰٪ پیش‌پرداخت پس از جلسه کشف اولیه شروع شده و مابقی آن طبق فازبندی پروپوزال تسویه می‌شود.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     5. FINAL CALL TO ACTION SECTION
+     ========================================================================== -->
+<section id="final-cta">
+  <div class="container">
+    <div class="cta-box">
+      <h2 class="section-title" data-i18n="final_cta_title">برای ساخت یک اثر فوق‌العاده آماده‌اید؟</h2>
+      <p class="section-desc" style="margin: 0 auto 30px auto;" data-i18n="final_cta_desc">
+        بیایید ایده‌های شما را به یک تجربه دیجیتال لوکس تبدیل کنیم که هویت برند شما را منعکس کرده و باعث رشد کسب‌وکارتان شود.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#contact" class="btn btn-primary" data-i18n="btn_start_proj">شروع پروژه شما</a>
+        <a href="#contact" class="btn btn-secondary" data-i18n="btn_sched_call">رزرو جلسه مشاوره</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Statistics Section -->
+    <section>
+      <div class="container">
+        <div class="stats-grid">
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="45">0</div>
+            <div class="stat-label" data-i18n="stat_projects">Projects Completed</div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="32">0</div>
+            <div class="stat-label" data-i18n="stat_clients">Happy Business Clients</div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="8">0</div>
+            <div class="stat-label" data-i18n="stat_years">Years Experience</div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label" data-i18n="stat_score">Lighthouse SEO Score</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section>
+      <div class="container">
+        <div class="testimonials-container">
+          <div class="glass-card testimonial-card">
+            <p class="testimonial-text" data-i18n="test_quote">
+              "NEORA completely elevated our brand presence. The speed, design precision, and responsiveness of our web platform instantly gave our clients confidence."
+            </p>
+            <div class="testimonial-author">Alexander Wright</div>
+            <div class="testimonial-role">Managing Director, Apex Real Estate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Blog & SEO Articles Section -->
+    <section id="blog">
+      <div class="container">
+        <div class="section-tag" data-i18n="blog_tag">وبلاگ & مقالات</div>
+        <h2 class="section-title" data-i18n="blog_title">جدیدترین مقالات و تحلیل‌ها</h2>
+        <p class="section-desc" data-i18n="blog_desc">اشتراک‌گذاری دانش تخصصی در زمینه طراحی UI/UX، اصول گرافیک دیزاین و استراتژی‌های رشد سئو.</p>
+
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 40px;">
+          <!-- Blog Article 1 -->
+          <article class="glass-card service-card">
+            <div style="font-size: 0.8rem; color: var(--primary); font-weight: 700; margin-bottom: 8px;">۱۰ مرداد ۱۴۰۵ • ۶ دقیقه مطالعه</div>
+            <h3 class="service-title" style="font-size: 1.2rem;" data-i18n="b1_title">اصول طراحی هویت بصری لوکس در سال ۲۰۲۶</h3>
+            <p class="service-desc" style="margin-bottom: 20px;" data-i18n="b1_desc">بررسی نقش مینیمالیسم، تایپوگرافی اختصاصی و پالت‌های رنگی محدود در ارتقای ارزش برند.</p>
+            <a href="#" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.85rem;" data-i18n="btn_read">مطالعه مقاله ➔</a>
+          </article>
+
+          <!-- Blog Article 2 -->
+          <article class="glass-card service-card">
+            <div style="font-size: 0.8rem; color: var(--primary); font-weight: 700; margin-bottom: 8px;">۲۸ تیر ۱۴۰۵ • ۴ دقیقه مطالعه</div>
+            <h3 class="service-title" style="font-size: 1.2rem;" data-i18n="b2_title">چگونه UI/UX اختصاصی فروش وب‌سایت را ۳ برابر می‌کند؟</h3>
+            <p class="service-desc" style="margin-bottom: 20px;" data-i18n="b2_desc">تحلیل تاثیر روانشناسی کاربر و ساده‌سازی مسیر خرید در لندینگ پیج‌های مدرن.</p>
+            <a href="#" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.85rem;" data-i18n="btn_read">مطالعه مقاله ➔</a>
+          </article>
+
+          <!-- Blog Article 3 -->
+          <article class="glass-card service-card">
+            <div style="font-size: 0.8rem; color: var(--primary); font-weight: 700; margin-bottom: 8px;">۱۵ تیر ۱۴۰۵ • ۸ دقیقه مطالعه</div>
+            <h3 class="service-title" style="font-size: 1.2rem;" data-i18n="b3_title">کلیدهای طلایی سئوی فنی و نمره ۱۰۰ لایت‌هاوس</h3>
+            <p class="service-desc" style="margin-bottom: 20px;" data-i18n="b3_desc">راهنمای بهینه‌سازی کدهای فرانت‌اند، ساختار Schema.org و افزایش سرعت بارگذاری صفحات.</p>
+            <a href="#" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.85rem;" data-i18n="btn_read">مطالعه مقاله ➔</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & CTA Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="cta-box margin-bottom: 60px;">
+          <h2 class="section-title" data-i18n="cta_title">Let's Build Something Amazing Together</h2>
+          <p class="section-desc" style="margin: 0 auto 30px auto;" data-i18n="cta_desc">Ready to take your digital presence to the next level of design excellence?</p>
+          <a href="mailto:hello@neora.design" class="btn btn-primary" data-i18n="btn_book">Book a Strategy Call</a>
+        </div>
+
+        <div class="contact-grid" style="margin-top: 60px;">
+          <div class="contact-links">
+            <div class="glass-card contact-item">
+              <div class="contact-icon">✉</div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="lbl_email">Email Us</div>
+                <div style="font-weight: 700;">hello@neora.design</div>
+              </div>
+            </div>
+
+            <div class="glass-card contact-item">
+              <div class="contact-icon">✈</div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Telegram</div>
+                <div style="font-weight: 700;">@NeoraStudio</div>
+              </div>
+            </div>
+
+            <div class="glass-card contact-item">
+              <div class="contact-icon">💻</div>
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">GitHub</div>
+                <div style="font-weight: 700;">github.com/neoradesign</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="glass-card contact-form" style="padding: 36px;" onsubmit="event.preventDefault(); alert('Message Sent!');">
+            <div class="form-group">
+              <label data-i18n="lbl_name">Name</label>
+              <input type="text" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="lbl_email_field">Email Address</label>
+              <input type="email" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="lbl_msg">Project Details</label>
+              <textarea class="form-textarea" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="btn_send">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="logo" style="font-size: 1.2rem;">
+        NEORA<span class="logo-dot"></span>
+      </div>
+
+      <div style="font-size: 0.875rem; color: var(--text-muted);">
+        © <span id="year"></span> NEORA Studio. All rights reserved.
+      </div>
+
+      <div style="display: flex; gap: 20px; font-size: 0.875rem; color: var(--text-muted);">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
