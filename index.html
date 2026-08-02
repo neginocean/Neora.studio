@@ -199,39 +199,95 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <div class="section-tag" data-i18n="hero_tag">
-              Digital Experience Studio
-            </div>
-            <h1 class="hero-title" data-i18n="hero_title">
-              Designing digital experiences <span>that people remember.</span>
-            </h1>
-            <p class="hero-desc" data-i18n="hero_desc">
-              We combine high-end UI/UX aesthetics with precision front-end
-              engineering to build high-converting websites for ambitious
-              brands.
-            </p>
-            <div class="hero-cta">
-              <a
-                href="#projects"
-                class="btn btn-primary"
-                data-i18n="btn_view_work"
-                >View Portfolio</a
-              >
-              <a
-                href="#contact"
-                class="btn btn-secondary"
-                data-i18n="btn_contact"
-                >Get in Touch</a
-              >
+      <!-- ==========================================================================
+     NEORA CINEMATIC EXPERIENCE (APPLE / LINEAR / AWWWARDS REDESIGN)
+     ========================================================================== -->
+      <section class="hero-cinematic" id="hero">
+        <!-- 1. Deep Atmospheric Background & Canvas Light Field -->
+        <div class="cinematic-bg-layer">
+          <div class="cinematic-grid-mask"></div>
+          <canvas id="cinematic-particle-canvas"></canvas>
+          <div class="cursor-glow-orb" id="cursor-glow"></div>
+        </div>
+
+        <!-- 3. Main Stage: Floating Glass Art Centerpiece & Editorial Composition -->
+        <div class="cinematic-stage container">
+          <!-- Floating Artistic 3D Glass Sculpture (Reacts to Cursor) -->
+          <div class="sculpture-container" id="sculpture-wrapper">
+            <div class="glass-sculpture" id="glass-sculpture">
+              <div class="sculpture-prism prism-1"></div>
+              <div class="sculpture-prism prism-2"></div>
+              <div class="sculpture-prism prism-3"></div>
+              <div class="sculpture-prism prism-4"></div>
+              <div class="sculpture-core-light"></div>
             </div>
           </div>
 
-          <div class="hero-visual">
-            <canvas id="hero-canvas"></canvas>
+          <!-- Editorial Statement & Actions Overlay -->
+          <div class="editorial-content-layer">
+            <!-- Studio Badge -->
+            <div class="editorial-badge">
+              <span class="pulse-ring"></span>
+              <span data-i18n="hero_tag"
+                >استودیو بین‌المللی طراحی تجربیات دیجیتال</span
+              >
+            </div>
+
+            <!-- Main Editorial Statement -->
+            <h2 class="editorial-headline" data-i18n="hero_title">
+              خلق جهان‌های دیجیتال؛ <br />
+              <span class="headline-ice-gradient"
+                >جایی که برندها جاودانه می‌شوند.</span
+              >
+            </h2>
+
+            <!-- Subtext -->
+            <p class="editorial-description" data-i18n="hero_desc">
+              نیورا تلاقی استراتژی، هنر بصری و فناوری است. ما محصولاتی خلق
+              می‌کنیم که هنجارهای صنعت را بازتعریف کرده و تجربیات دیجیتالی فراتر
+              از انتظار می‌سازند.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="editorial-actions">
+              <a
+                href="#projects"
+                class="btn-cinematic btn-cinematic-primary"
+                data-i18n="btn_explore_projects"
+              >
+                <span>کشف پروژه‌ها</span>
+                <span class="btn-glow"></span>
+              </a>
+              <a
+                href="#contact"
+                class="btn-cinematic btn-cinematic-secondary"
+                data-i18n="btn_start_project"
+              >
+                شروع یک پروژه
+              </a>
+            </div>
+
+            <!-- Capability Tags -->
+            <div class="editorial-meta-bar">
+              <span>UI/UX Architecture</span>
+              <span class="meta-dot">•</span>
+              <span>Luxury Brand Identity</span>
+              <span class="meta-dot">•</span>
+              <span>Creative Engineering</span>
+              <span class="meta-dot">•</span>
+              <span>Worldwide</span>
+            </div>
           </div>
+        </div>
+
+        <!-- 4. Scroll Cue Transition -->
+        <div class="cinematic-scroll-cue">
+          <a href="#projects" class="scroll-cue-wrapper">
+            <span class="scroll-cue-line"></span>
+            <span class="scroll-cue-text" data-i18n="scroll_cue"
+              >ورود به گالری دیجیتال</span
+            >
+          </a>
         </div>
       </section>
 

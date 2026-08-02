@@ -26,11 +26,11 @@
 :root {
   /* --- 1.1 Semantic Color Palette --- */
   /* Brand Core Colors */
-  --primary: #5db7ff;
+  --primary: #5dc9ff;
   --primary-hover: #38bdf8;
-  --primary-dark: #0284c7; /* High-contrast blue for text on white */
+  --primary-dark: #0292c7; /* High-contrast blue for text on white */
   --secondary: #d9f1ff; /* Light ice blue tint */
-  --accent: #86cbff; /* Sky blue accent */
+  --accent: #86d9ff; /* Sky blue accent */
 
   /* Surface & Background Colors */
   --bg-main: #f7fbff; /* Base page background */
@@ -123,6 +123,7 @@ html {
   font-size: var(--fs-base);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html[dir="ltr"] {
@@ -468,6 +469,377 @@ html[dir="rtl"] .nav-link::after {
 /* ==========================================================================
    6. HERO SECTION
    ========================================================================== */
+/* ==========================================================================
+   NEORA CINEMATIC HERO EXPERIENCE
+   ========================================================================== */
+.hero-cinematic {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #026d9b5f;
+  color: var(--text-white);
+  padding-top: 100px;
+}
+
+/* 1. Background Layers & Grid */
+.cinematic-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cinematic-grid-mask {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(93, 183, 255, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    black 30%,
+    transparent 80%
+  );
+}
+
+#cinematic-particle-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cursor-glow-orb {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(93, 183, 255, 0.25) 0%,
+    rgba(7, 13, 24, 0) 70%
+  );
+  filter: blur(50px);
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out;
+  pointer-events: none;
+}
+
+/* 2. Intro Logo Monument Reveal */
+.cinematic-intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-monument-title {
+  font-size: clamp(4rem, 16vw, 14rem);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: 0.2em;
+  color: var(--text-white);
+  display: flex;
+  gap: 12px;
+}
+
+.monument-letter {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(20px);
+  transform: scale(1.2) translateY(20px);
+  animation: letterReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.monument-letter:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.monument-letter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.monument-letter:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.monument-letter:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.monument-letter:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes letterReveal {
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1) translateY(0);
+  }
+}
+
+.intro-tagline {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.4em;
+  color: var(--primary);
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.8s forwards;
+}
+
+/* 3. Stage & Floating 3D Glass Sculpture */
+.cinematic-stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+}
+
+.sculpture-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 480px;
+  perspective: 1000px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-sculpture {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+}
+
+.sculpture-prism {
+  position: absolute;
+  inset: 20%;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(93, 183, 255, 0.3);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.4),
+    inset 0 0 30px rgba(93, 183, 255, 0.2);
+}
+
+.prism-1 {
+  transform: rotateX(20deg) rotateY(35deg) translateZ(40px);
+}
+.prism-2 {
+  transform: rotateX(-30deg) rotateY(-20deg) translateZ(-30px);
+  border-color: rgba(217, 241, 255, 0.4);
+}
+.prism-3 {
+  transform: rotateX(45deg) rotateZ(15deg) translateZ(20px);
+  background: rgba(93, 183, 255, 0.05);
+}
+.prism-4 {
+  transform: rotateY(60deg) translateZ(60px);
+  scale: 0.8;
+}
+
+.sculpture-core-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--primary);
+  filter: blur(40px);
+  transform: translate(-50%, -50%);
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* 4. Editorial Content Overlay */
+.editorial-content-layer {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.editorial-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.21);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(93, 183, 255, 0.25);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--text-white);
+  margin-bottom: 28px;
+}
+
+.pulse-ring {
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--primary);
+}
+
+.editorial-headline {
+  font-size: clamp(2.5rem, 5.5vw, 4.8rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.headline-ice-gradient {
+  font-size: var(--fs-3xl);
+  text-shadow: 1px 1px 4px #ffffff93;
+}
+
+.editorial-description {
+  font-size: var(--fs-md);
+  color: #eef9ff;
+  line-height: var(--lh-relaxed);
+  max-width: 680px;
+  margin: 0 auto 30px auto;
+}
+
+.editorial-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-cinematic {
+  position: relative;
+  padding: 16px 36px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-cinematic-primary {
+  background: var(--text-white);
+  color: #070d18;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.btn-cinematic-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(93, 183, 255, 0.4);
+}
+
+.btn-cinematic-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+  backdrop-filter: blur(10px);
+}
+
+.btn-cinematic-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.editorial-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 60px;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: #64748b;
+}
+
+.meta-dot {
+  color: var(--primary);
+}
+
+/* 5. Scroll Cue */
+.cinematic-scroll-cue {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.scroll-cue-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  transition: color 0.3s ease;
+}
+
+.scroll-cue-wrapper:hover {
+  color: var(--accent);
+}
+
+.scroll-cue-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
+  animation: lineDrop 2s infinite;
+}
+
+@keyframes lineDrop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50.1% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
 .hero-section {
   min-height: 100vh;
   padding-top: 160px;
@@ -982,7 +1354,7 @@ html[dir="rtl"] .slider-swipe-hint {
   width: 40px;
   height: 40px;
   padding: 9px;
-  background: rgba(93, 183, 255, 0.12);
+  background: rgba(229, 243, 255, 0.87);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   cursor: pointer;
